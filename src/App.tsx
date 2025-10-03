@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom"
+import Header from "./components/Header"
 
 function App() {
 
   return (
     <>
-      <div>
-        <h1>GitHub User Finder</h1>
+      <div className="bg-slate-800 h-screen">
+        <Header />
         <Outlet />
       </div>
     </>

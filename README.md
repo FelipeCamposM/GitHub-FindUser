@@ -1,73 +1,160 @@
-# React + TypeScript + Vite
+# 🔍 GitHub User Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+</div>
 
-Currently, two official plugins are available:
+<div align="center">
+  <h3>🚀 Encontre e explore perfis do GitHub de forma rápida e elegante</h3>
+  <p>Uma aplicação moderna para buscar usuários do GitHub e visualizar suas informações principais</p>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📋 Sobre o Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O **GitHub User Finder** é uma aplicação web responsiva que permite pesquisar usuários do GitHub e visualizar informações detalhadas sobre seus perfis, incluindo:
 
-## Expanding the ESLint configuration
+- 👤 **Avatar e nome de usuário**
+- 📍 **Localização**
+- 👥 **Seguidores e pessoas seguidas**
+- 🔗 **Link direto para os repositórios**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Funcionalidades
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🔍 **Busca em tempo real** - Digite o nome de usuário e encontre instantaneamente
+- 📱 **Design responsivo** - Funciona perfeitamente em dispositivos móveis e desktop
+- 🎨 **Interface moderna** - Design clean e intuitivo com Tailwind CSS
+- ⚡ **Performance otimizada** - Construído com Vite para carregamento ultrarrápido
+- 🌐 **Integração com API GitHub** - Dados sempre atualizados diretamente da API oficial
+- ❌ **Tratamento de erros** - Feedback claro quando usuário não é encontrado
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tecnologias Utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **⚛️ React 19** - Biblioteca JavaScript para interfaces de usuário
+- **📘 TypeScript** - Superset do JavaScript com tipagem estática
+- **🎨 Tailwind CSS 4** - Framework CSS utilitário para estilização
+- **⚡ Vite** - Build tool moderna e rápida
+- **🧭 React Router DOM** - Roteamento para aplicações React
+- **🎯 React Icons** - Biblioteca de ícones para React
+- **🔧 ESLint** - Ferramenta de linting para manter código limpo
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- Node.js (versão 16 ou superior)
+- npm ou yarn
+
+### Instalação
+
+1. **Clone o repositório**
+
+```bash
+git clone https://github.com/FelipeCamposM/GitHub-FindUser.git
+cd github-finduser
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Instale as dependências**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+# ou
+yarn install
 ```
+
+3. **Execute o projeto**
+
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+4. **Abra no navegador**
+
+```
+http://localhost:5173
+```
+
+## 📁 Estrutura do Projeto
+
+```
+github-finduser/
+├── 📁 public/
+├── 📁 src/
+│   ├── 📁 components/
+│   │   ├── 🧩 Error.tsx
+│   │   ├── 🧩 Header.tsx
+│   │   ├── 🧩 Search.tsx
+│   │   └── 🧩 User.tsx
+│   ├── 📁 routes/
+│   │   └── 🧩 Home.tsx
+│   ├── 📁 types/
+│   │   └── 📝 user.ts
+│   ├── 🎨 App.css
+│   ├── ⚛️ App.tsx
+│   ├── 🎨 index.css
+│   └── ⚛️ main.tsx
+├── ⚙️ tailwind.config.js
+├── ⚙️ vite.config.ts
+├── 📦 package.json
+└── 📖 README.md
+```
+
+## 🎯 Scripts Disponíveis
+
+- `npm run dev` - 🔥 Executa o projeto em modo de desenvolvimento
+- `npm run build` - 📦 Constrói o projeto para produção
+- `npm run lint` - 🔍 Executa o linter para verificar qualidade do código
+- `npm run preview` - 👀 Visualiza o build de produção
+
+## 🤝 Como Contribuir
+
+1. **Faça um fork do projeto**
+2. **Crie uma branch para sua feature**
+   ```bash
+   git checkout -b feature/nova-feature
+   ```
+3. **Commit suas mudanças**
+   ```bash
+   git commit -m 'Adiciona nova feature'
+   ```
+4. **Push para a branch**
+   ```bash
+   git push origin feature/nova-feature
+   ```
+5. **Abra um Pull Request**
+
+## 📸 Screenshots
+
+> _Em breve serão adicionadas capturas de tela da aplicação_
+
+## 🐛 Reportar Bugs
+
+Encontrou um bug? Abra uma [issue](https://github.com/FelipeCamposM/GitHub-FindUser/issues) detalhando:
+
+- Descrição do problema
+- Passos para reproduzir
+- Comportamento esperado vs atual
+- Screenshots (se aplicável)
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👨‍💻 Autor
+
+**Felipe Campos**
+
+- GitHub: [@FelipeCamposM](https://github.com/FelipeCamposM)
+
+---
+
+<div align="center">
+  <p>⭐ Se este projeto te ajudou, considere dar uma estrela!</p>
+  <p>💙 Feito com React, TypeScript e muito ☕</p>
+</div>
