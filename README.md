@@ -12,6 +12,16 @@
   <p>Uma aplicação moderna para buscar usuários do GitHub e visualizar suas informações principais</p>
 </div>
 
+<div align="center">
+  <h2>🌐 Acesse o Site</h2>
+  <p>
+    <a href="https://git-hub-find-user.vercel.app" target="_blank">
+      <img src="https://img.shields.io/badge/🚀_Acessar_Site-37a779?style=for-the-badge&logoColor=white" alt="Acessar Site" />
+    </a>
+  </p>
+  <p><strong>👆 Clique no botão acima para testar a aplicação online!</strong></p>
+</div>
+
 ---
 
 ## 📋 Sobre o Projeto
