@@ -3,7 +3,6 @@ type SearchProps = {
 };
 
 import { useState, type KeyboardEvent } from "react";
-import React from "react";
 import { BsSearch } from "react-icons/bs";
 
 const Search = ({ loadUser }: SearchProps) => {
@@ -11,9 +10,9 @@ const Search = ({ loadUser }: SearchProps) => {
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Enter") {
-        loadUser(userName);
+      loadUser(userName);
     }
-};
+  };
 
   return (
     <div className="text-white">
